@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Oleg/Desktop/mp2-lab5-text/src
+# Install script for directory: D:/mp2-lab5-text/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

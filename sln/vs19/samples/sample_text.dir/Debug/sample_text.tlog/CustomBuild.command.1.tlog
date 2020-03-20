@@ -1,6 +1,6 @@
-^C:\USERS\OLEG\DESKTOP\MP2-LAB5-TEXT\SAMPLES\CMAKELISTS.TXT
+^D:\MP2-LAB5-TEXT\SAMPLES\CMAKELISTS.TXT
 setlocal
-D:\Cmake\bin\cmake.exe -SC:/Users/Oleg/Desktop/mp2-lab5-text -BC:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19 --check-stamp-file C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/samples/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/mp2-lab5-text -BD:/mp2-lab5-text/sln/vs19 --check-stamp-file D:/mp2-lab5-text/sln/vs19/samples/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

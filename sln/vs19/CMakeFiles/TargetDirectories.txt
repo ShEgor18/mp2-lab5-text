@@ -1,4 +1,4 @@
-C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/CMakeFiles/ALL_BUILD.dir
-C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/CMakeFiles/ZERO_CHECK.dir
-C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/src/CMakeFiles/text.dir
-C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/samples/CMakeFiles/sample_text.dir
+D:/mp2-lab5-text/sln/vs19/CMakeFiles/ALL_BUILD.dir
+D:/mp2-lab5-text/sln/vs19/CMakeFiles/ZERO_CHECK.dir
+D:/mp2-lab5-text/sln/vs19/src/CMakeFiles/text.dir
+D:/mp2-lab5-text/sln/vs19/samples/CMakeFiles/sample_text.dir
