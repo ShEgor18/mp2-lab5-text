@@ -9,6 +9,24 @@ struct Node
 	int level;
 };
 
+struct MyIterator
+{
+	Node* it;
+	//pair<int, string>& operator*();
+	//pair<int, string>& operator->();
+
+	MyIterator next();//"идет вправо"
+	MyIterator endNext();//"идет вправо до упора"
+	MyIterator nextLevel();//"идет вниз"
+	MyIterator endNextLevel();//"идет вниз до упора"
+
+	void insNext(string data); //"добавляет новый Node в next"
+	void insDown(string data); //"добавляет новый Node в down"
+
+	bool operator==(const MyIterator& iterator);
+	bool operator!=(const MyIterator& iterator);
+};
+
 class MyList{
 	Node *first;
 	Node *end;
