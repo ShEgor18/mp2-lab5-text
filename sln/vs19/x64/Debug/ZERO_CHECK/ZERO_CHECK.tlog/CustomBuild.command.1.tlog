@@ -1,0 +1,10 @@
+^C:\USERS\OLEG\DESKTOP\MP2-LAB5-TEXT\SLN\VS19\CMAKEFILES\D6533C387F2F29DB7030334AE0145BCE\GENERATE.STAMP.RULE
+setlocal
+D:\Cmake\bin\cmake.exe -SC:/Users/Oleg/Desktop/mp2-lab5-text -BC:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Oleg/Desktop/mp2-lab5-text/sln/vs19/text.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
