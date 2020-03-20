@@ -5,6 +5,14 @@ using namespace std;
 
 /*=========================================Iterator========================================*/
 
+Node& MyIterator::operator*()
+{
+	return *it;
+}
+Node& MyIterator::operator->()
+{
+	return *it;
+}
 MyIterator MyIterator::next()
 {
 	it = it->next;

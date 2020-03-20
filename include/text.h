@@ -12,8 +12,8 @@ struct Node
 struct MyIterator
 {
 	Node* it;
-	//pair<int, string>& operator*();
-	//pair<int, string>& operator->();
+	Node& operator*();
+	Node& operator->();
 
 	MyIterator next();//"идет вправо"
 	MyIterator endNext();//"идет вправо до упора"
