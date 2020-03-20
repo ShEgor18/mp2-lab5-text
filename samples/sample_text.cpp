@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	setlocale(0, "");
-	MyList list("Заголовок");
+	MyList list("АиСД");
 	list.push_back_current_level("Раздел 2");
 	list.push_back_next_level("2.1. Полиномы");
 	list.push_back_next_level("1.Определение");

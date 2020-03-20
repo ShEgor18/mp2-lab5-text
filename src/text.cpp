@@ -3,6 +3,61 @@
 #include "text.h"
 using namespace std;
 
+/*=========================================Iterator========================================*/
+
+MyIterator MyIterator::next()
+{
+	it = it->next;
+	return *this;
+}
+MyIterator MyIterator::endNext()
+{
+	while (it->next != nullptr)
+	{
+		it = it->next;
+	}
+	return *this;
+}
+MyIterator MyIterator::nextLevel()
+{
+	it = it->down;
+	return *this;
+}
+MyIterator MyIterator::endNextLevel()
+{
+	while(it->down != nullptr)
+	{
+		it = it->down;
+	}
+	return *this;
+}
+void MyIterator::insNext(string data)
+{
+	Node* tmp = new Node();
+	tmp->data = data;
+	tmp->next = it->next;
+	tmp->down = nullptr;
+	tmp->level = it->level;
+	it->next = tmp;
+}
+void MyIterator::insDown(string data)
+{
+	Node* tmp = new Node();
+	tmp->data = data;
+	tmp->next = nullptr;
+	tmp->down = it->down;
+	tmp->level = it->level+1;
+	it->down = tmp;
+}
+bool MyIterator::operator==(const MyIterator& iterator) {
+	return (it->data == iterator.it->data);
+}
+bool MyIterator::operator!=(const MyIterator& iterator) {
+	return !(*this == iterator);
+}
+
+
+/*=========================================MyList========================================*/
 
 MyList::MyList(string text)
 {
@@ -10,7 +65,7 @@ MyList::MyList(string text)
 	tmp->data = text;
 	tmp->next = nullptr;
 	tmp->down = nullptr;
-	tmp->level = -1;
+	tmp->level = 0;
 	first = end = tmp;
 }
 
@@ -18,9 +73,6 @@ MyList::~MyList()
 {
 	Node* tmp = first;
 	stack<Node*> St;
-
-	St.push(tmp);
-	tmp = tmp->down;
 
 	while (tmp->next != nullptr)
 	{
@@ -39,6 +91,7 @@ MyList::~MyList()
 		}
 	}
 
+	delete tmp;
 	while (!St.empty())
 	{
 		tmp = St.top();
@@ -51,12 +104,13 @@ MyList::~MyList()
 
 void MyList::push_back_current_level(string data)
 {
-	if (end->level == -1)
+	if (end->level == 0)
 	{
 		push_back_next_level(data);
 	}
 	else
 	{
+		MyIterator it;
 		Node* tmp = new Node();
 		tmp->data = data;
 		tmp->next = nullptr;
@@ -82,8 +136,6 @@ void MyList::pop()
 {
 	Node* tmp = first;
 	stack<Node*> St;
-
-	tmp = tmp->down;
 	
 	while (tmp->next != nullptr)
 	{
