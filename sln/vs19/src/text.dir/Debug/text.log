@@ -1,4 +1,0 @@
-﻿  Building Custom Rule D:/mp2-lab5-text/src/CMakeLists.txt
-  text.cpp
-D:\mp2-lab5-text\src\text.cpp(121,14): warning C4101: it: неиспользованная локальная переменная
-  text.vcxproj -> D:\mp2-lab5-text\sln\vs19\lib\Debug\text.lib
